@@ -1,0 +1,49 @@
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>{{ptitle}}</h5>
+        <p>{{pdescription}}</p>
+    </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button class="btn btn-secondary answer-btn" onclick="answer(1)">ア</button>
+                <div class="fw-bold">{{item1text}}</div>
+                <div id="item1-explain" class="d-none">{{item1desc}}</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button class="btn btn-secondary answer-btn" onclick="answer(2)">イ</button>
+                <div class="fw-bold">{{item2text}}</div>
+                <div id="item2-explain" class="d-none">{{item2desc}}</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button class="btn btn-secondary answer-btn" onclick="answer(3)">ウ</button>
+                <div class="fw-bold">{{item3text}}</div>
+                <div id="item3-explain" class="d-none">{{item3desc}}</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button class="btn btn-secondary answer-btn" onclick="answer(4, 4)">エ</button>
+                <div class="fw-bold">{{item4text}}</div>
+                <div id="item4-explain" class="d-none">{{item4desc}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <button class="btn btn-link m-2" onclick="toNext()">次の問題</button>

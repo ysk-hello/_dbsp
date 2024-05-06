@@ -18,7 +18,17 @@ const data = [{ptitle: `問1`, pdescription: 'CAP定理に関する記述とし�
     item3desc: 'ウの解説です。',
     item4text: 'レプリケーション',
     item4desc: 'エの解説です。',
-    ansNum: 3}];
+    ansNum: 3},
+    {ptitle: `問3`, pdescription: '概念データモデルの説明として、最も適切なものはどれか。', 
+    item1text: '階層モデル、ネットワークモデル、関係モデルがある。',
+    item1desc: 'アの解説です。',
+    item2text: '業務プロセスを抽象化して表現したものである。',
+    item2desc: 'イの解説です。',
+    item3text: '集中型DBMSを導入するか、分散型DBMSを導入するかによって内容が変わる。',
+    item3desc: 'ウの解説です。',
+    item4text: '対象世界の情報構造を抽象化して表現したものである。',
+    item4desc: 'エの解説です。',
+    ansNum: 4}];
 
 function init(num) {
     problemNum = num;

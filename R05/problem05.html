@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データベーススペシャリスト試験 午前2 問題</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <h3>問5</h3>
+    <p>従業員番号と氏名と使用できるプログラム言語を管理するために、"従業員"表及び"プログラム言語"表を設計する。
+        "プログラム言語を2種類以上使用できる従業員がいる。プログラム言語を全く使用できない従業員もいる。"
+        という状況を管理する"プログラム言語"表の設計として、適切なものはどれか。ここで、実線の下線は主キーを表す。
+    </p>
+    <p>[従業員表]
+        従業員 (<u>従業員番号</u>、氏名)
+    </p>
+    <ul>
+        <li>プログラム言語 (<u>氏名</u>、プログラム言語)</li>
+        <li>プログラム言語 (従業員番号、<u>プログラム言語</u>)</li>
+        <li>プログラム言語 (<u>従業員番号</u>、プログラム言語)</li>
+        <li>プログラム言語 (<u>従業員番号</u>、<u>プログラム言語</u>)</li>
+    </ul>
+
+    <button name="answer" onclick="showAnswer()">正解</button>
+    <button name="next" onclick="toNext(5)">次へ</button>
+
+    <div id="answer">
+        <p>正解: エ</p>
+    </div>
+</body>
+</html>

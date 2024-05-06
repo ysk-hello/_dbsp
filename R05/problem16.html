@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データベーススペシャリスト試験 午前2 問題</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <h3>問16</h3>
+    <p>トランザクションの隔離水準を高めたとき、不整合なデータを読み込むトランザクション数と、
+        単位時間に処理できるトランザクション数の傾向として、適切な組合せはどれか。
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <td></td>
+                <td>不整合なデータを読み込むトランザクション数</td>
+                <td>単位時間に処理できるトランザクション数</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ア</td>
+                <td>増える</td>
+                <td>増える</td>
+            </tr>
+            <tr>
+                <td>イ</td>
+                <td>増える</td>
+                <td>減る</td>
+            </tr>
+            <tr>
+                <td>ウ</td>
+                <td>減る</td>
+                <td>増える</td>
+            </tr>
+            <tr>
+                <td>エ</td>
+                <td>減る</td>
+                <td>減る</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button name="answer" onclick="showAnswer()">正解</button>
+    <button name="next" onclick="toNext(16)">次へ</button>
+
+    <div id="answer">
+        <p>正解: エ</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データベーススペシャリスト試験 午前2 問題</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <h3>問2</h3>
+    <p>大文字のアルファベットで始まる膨大な数のデータを、規則に従って複数のノードに割り当てる。
+        このようにあらかじめ定めた規則に従って、複数のノードにデータを分散して割り当てる方法はどれか。</p>
+    <p>[規則]
+        <ol>
+            <li>データの先頭文字がA～Gの場合はノード1に格納する。</li>
+            <li>データの先頭文字がH～Nの場合はノード2に格納する。</li>
+            <li>データの先頭文字がO～Zの場合はノード3に格納する。</li>
+        </ol>
+    </p>
+    <ul>
+        <li>2相コミットプロトコル</li>
+        <li>コンシステントハッシング</li>
+        <li>シャーディング</li>
+        <li>レプリケーション</li>
+    </ul>
+
+    <button name="answer" onclick="showAnswer()">正解</button>
+    <button name="next" onclick="toNext(2)">次へ</button>
+
+    <div id="answer">
+        <p>正解: ウ</p>
+    </div>
+</body>
+</html>

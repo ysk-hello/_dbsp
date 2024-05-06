@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データベーススペシャリスト試験 午前2 問題</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <h3>問19</h3>
+    <p>DRDoS（Distributed Reflection Denial of Service）攻撃に該当するものはどれか。
+    </p>
+    <ul>
+        <li>攻撃対象のWebサーバ1台に対して、多数のPCから一斉にリクエストを送ってサーバのリソースを枯渇させる攻撃と、
+            大量のDNSクエリの送信によってネットワークの帯域を消費する攻撃を同時に行う。
+        </li>
+        <li>攻撃対象のWebサイトのログインパスワードを解読するために、ブルートフォースによるログイン試行を、
+            多数のスマートフォン、IoT機器などから成るボットネットを踏み台にして一斉に行う。
+        </li>
+        <li>攻撃対象のサーバに大量のレスポンスが同時に送り付けられるようにするために、多数のオープンリゾルバに対して、
+            送信元IPアドレスを攻撃対象のサーバのIPアドレスに偽装した名前解決のリクエストを一斉に送信する。
+        </li>
+        <li>
+            攻撃対象の組織内の多数の端末をマルウェアに感染させ、当該マルウェアを遠隔操作することによって
+            データの改ざんやファイルの消去を一斉に行う。
+        </li>
+    </ul>
+
+    <button name="answer" onclick="showAnswer()">正解</button>
+    <button name="next" onclick="toNext(19)">次へ</button>
+
+    <div id="answer">
+        <p>正解: ウ</p>
+    </div>
+</body>
+</html>

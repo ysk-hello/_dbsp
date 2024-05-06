@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データベーススペシャリスト試験 午前2 問題</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <h3>問12</h3>
+    <p>2相ロック方式を用いたトランザクションの同時実行制御に関する記述のうち、適切なものはどれか。
+    </p>
+    <ul>
+        <li>全てのトランザクションが直列に制御され、デッドロックが発生することはない。</li>
+        <li>トランザクションのコミット順序は、トランザクション開始の時刻順となるように制御される。</li>
+        <li>トランザクションは、自身が獲得したロックを全て解除した後にだけ、コミット操作を実行できる。</li>
+        <li>トランザクションは、必要な全てのロックを獲得した後にだけ、ロックを解除できる。</li>
+    </ul>
+
+    <button name="answer" onclick="showAnswer()">正解</button>
+    <button name="next" onclick="toNext(12)">次へ</button>
+
+    <div id="answer">
+        <p>正解: エ</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データベーススペシャリスト試験 午前2 問題</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <div class="border rounded m-2 p-2">
+        <h5>問1</h5>
+        <p>CAP定理に関する記述として、適切なものはどれか。</p>
+    </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <!-- <ul>
+            <li id="item1">システムの可用性は基本的に高く、サービスは利用可能であるが、整合性については厳密ではない。
+                しかし、最終的には整合性が取れた状態になる。<span></span></li>
+            <li id="item2">トランザクション処理は、データの整合性を保証するので、実行結果が矛盾した状態になることはない。<span></span></li>
+            <li id="item3">複数のトランザクションを並列に処理したときの実行結果と、直列で逐次処理したときの実行結果は一致する。<span></span></li>
+            <li id="item4">分散システムにおいて、整合性、可用性、分断耐性の三つを同時に満たすことはできない。<span></span></li>
+        </ul> -->
+
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+              <span class="badge bg-primary rounded-pill"></span>
+              <span class="badge bg-success rounded-pill"></span>
+              <div class="ms-2 me-auto">
+                <button class="btn btn-secondary answer-btn" onclick="answer(4, 1)">ア</button>
+                <div class="fw-bold">システムの可用性は基本的に高く、サービスは利用可能であるが、整合性については厳密ではない。
+                    しかし、最終的には整合性が取れた状態になる。</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+              </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+              <span class="badge bg-primary rounded-pill"></span>
+              <span class="badge bg-success rounded-pill"></span>
+              <div class="ms-2 me-auto">
+                <button class="btn btn-secondary answer-btn" onclick="answer(4, 2)">イ</button>
+                <div class="fw-bold">トランザクション処理は、データの整合性を保証するので、実行結果が矛盾した状態になることはない。</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+              </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button class="btn btn-secondary answer-btn" onclick="answer(4, 3)">ウ</button>
+                <div class="fw-bold">複数のトランザクションを並列に処理したときの実行結果と、直列で逐次処理したときの実行結果は一致する。</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+              </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                  <button class="btn btn-secondary answer-btn" onclick="answer(4, 4)">エ</button>
+                  <div class="fw-bold">分散システムにおいて、整合性、可用性、分断耐性の三つを同時に満たすことはできない。</div>
+                  <div id="item4-explain" class="d-none">エの解説です。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- <div class="border rounded m-2 p-2" id="answer-btn-area">
+        <button class="btn btn-secondary btn-lg answer-btn" onclick="answer(4, 1)">ア</button>
+        <button class="btn btn-secondary btn-lg answer-btn" onclick="answer(4, 2)">イ</button>
+        <button class="btn btn-secondary btn-lg answer-btn" onclick="answer(4, 3)">ウ</button>
+        <button class="btn btn-secondary btn-lg answer-btn" onclick="answer(4, 4)">エ</button>
+    </div> -->
+
+    <button class="btn btn-link m-2" onclick="toNext(1)">次の問題</button>
+
+    <!-- <div class="border rounded m-2 p-2" id="answer-area">
+        <div class="my-2">正解: エ</div>
+        <div class="my-2" id="your-answer">解答: X<span class="mx-3">不正解</span></div>
+    </div>
+    <div class="border rounded m-2 p-2" id="explain-area">
+        <div class="explain mb-3">
+            <span>解説</span>
+        </div>
+        <button class="btn btn-secondary" onclick="toNext(1)">次へ</button>
+    </div> -->
+</body>
+</html>

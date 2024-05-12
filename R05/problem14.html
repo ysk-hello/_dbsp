@@ -4,25 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>データベーススペシャリスト試験 午前2 問題</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.css">
 </head>
 <body>
-    <h3>問14</h3>
-    <p>データベースのREDOのべき等（idempotent）の説明として、適切なものはどれか。
-    </p>
-    <ul>
-        <li>REDOによる障害回復の時間を短縮するために、あるルールに従って整合性の取れたデータを記録媒体に適宜反映すること</li>
-        <li>REDOを繰返し実行しても、正常終了するときには1回実行したときと同じデータの状態になること</li>
-        <li>事前に取得していたバックアップデータを記録媒体に復旧し、そのデータに対してREDOを実行すること</li>
-        <li>トランザクションをコミットする前にREDOに必要な情報を書き出し、データの更新はその場で行うこと</li>
-    </ul>
-
-    <button name="answer" onclick="showAnswer()">正解</button>
-    <button name="next" onclick="toNext(14)">次へ</button>
-
-    <div id="answer">
-        <p>正解: イ</p>
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>問14</h5>
+        <p>データベースのREDOのべき等（idempotent）の説明として、適切なものはどれか。</p>
     </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn1" class="btn btn-secondary answer-btn">ア</button>
+                <div class="fw-bold">REDOによる障害回復の時間を短縮するために、あるルールに従って整合性の取れたデータを記録媒体に適宜反映すること</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn2" class="btn btn-secondary answer-btn">イ</button>
+                <div class="fw-bold">REDOを繰返し実行しても、正常終了するときには1回実行したときと同じデータの状態になること</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn3" class="btn btn-secondary answer-btn">ウ</button>
+                <div class="fw-bold">事前に取得していたバックアップデータを記録媒体に復旧し、そのデータに対してREDOを実行すること</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn4" class="btn btn-secondary answer-btn">エ</button>
+                <div class="fw-bold">トランザクションをコミットする前にREDOに必要な情報を書き出し、データの更新はその場で行うこと</div>
+                <div id="item4-explain" class="d-none">エの解説です。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <button id="next-btn" class="btn btn-link m-2">次の問題</button>
+
+    <script src="dist/problem-manager.js"></script>
 </body>
 </html>

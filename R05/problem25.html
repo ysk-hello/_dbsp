@@ -4,36 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>データベーススペシャリスト試験 午前2 問題</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.css">
 </head>
 <body>
-    <h3>問25</h3>
-    <p>
-        ステージング環境の説明として、適切なものはどれか。
-    </p>
-    <ul>
-        <li>開発者がプログラムを変更するたびに、サーバにプログラムを直接デプロイして動作を確認し、
-            デバッグするための環境
-        </li>
-        <li>
-            システムのベータ版を広く一般の利用者に公開してテストを実施してもらうことによって、
-            問題点やバグを報告してもらう環境
-        </li>
-        <li>
-            保護するネットワークと外部ネットワークとの間に境界ネットワーク（DMZ）を設置して、
-            セキュリティを高めたネットワーク環境
-        </li>
-        <li>
-            本運用システムとほぼ同じ構成のシステムを用意して、システムリリース前の最終テストを行う環境
-        </li>
-    </ul>
-
-    <button name="answer" onclick="showAnswer()">正解</button>
-    <button name="next" onclick="toNext(25)">次へ</button>
-
-    <div id="answer">
-        <p>正解: エ</p>
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>問25</h5>
+        <p>ステージング環境の説明として、適切なものはどれか。</p>
     </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn1" class="btn btn-secondary answer-btn">ア</button>
+                <div class="fw-bold">開発者がプログラムを変更するたびに、サーバにプログラムを直接デプロイして動作を確認し、
+                    デバッグするための環境</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn2" class="btn btn-secondary answer-btn">イ</button>
+                <div class="fw-bold">システムのベータ版を広く一般の利用者に公開してテストを実施してもらうことによって、
+                    問題点やバグを報告してもらう環境</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn3" class="btn btn-secondary answer-btn">ウ</button>
+                <div class="fw-bold">保護するネットワークと外部ネットワークとの間に境界ネットワーク（DMZ）を設置して、
+                    セキュリティを高めたネットワーク環境</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn4" class="btn btn-secondary answer-btn">エ</button>
+                <div class="fw-bold">本運用システムとほぼ同じ構成のシステムを用意して、システムリリース前の最終テストを行う環境</div>
+                <div id="item4-explain" class="d-none">エの解説です。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <button id="next-btn" class="btn btn-link m-2">次の問題</button>
+
+    <script src="dist/problem-manager.js"></script>
 </body>
 </html>

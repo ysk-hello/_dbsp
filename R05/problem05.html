@@ -4,30 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>データベーススペシャリスト試験 午前2 問題</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.css">
 </head>
 <body>
-    <h3>問5</h3>
-    <p>従業員番号と氏名と使用できるプログラム言語を管理するために、"従業員"表及び"プログラム言語"表を設計する。
-        "プログラム言語を2種類以上使用できる従業員がいる。プログラム言語を全く使用できない従業員もいる。"
-        という状況を管理する"プログラム言語"表の設計として、適切なものはどれか。ここで、実線の下線は主キーを表す。
-    </p>
-    <p>[従業員表]
-        従業員 (<u>従業員番号</u>、氏名)
-    </p>
-    <ul>
-        <li>プログラム言語 (<u>氏名</u>、プログラム言語)</li>
-        <li>プログラム言語 (従業員番号、<u>プログラム言語</u>)</li>
-        <li>プログラム言語 (<u>従業員番号</u>、プログラム言語)</li>
-        <li>プログラム言語 (<u>従業員番号</u>、<u>プログラム言語</u>)</li>
-    </ul>
-
-    <button name="answer" onclick="showAnswer()">正解</button>
-    <button name="next" onclick="toNext(5)">次へ</button>
-
-    <div id="answer">
-        <p>正解: エ</p>
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>問5</h5>
+        <p>従業員番号と氏名と使用できるプログラム言語を管理するために、"従業員"表及び"プログラム言語"表を設計する。
+            "プログラム言語を2種類以上使用できる従業員がいる。プログラム言語を全く使用できない従業員もいる。"
+            という状況を管理する"プログラム言語"表の設計として、適切なものはどれか。ここで、実線の下線は主キーを表す。</p>
+        <p>[従業員表]
+            従業員 (<u>従業員番号</u>、氏名)
+        </p>
     </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn1" class="btn btn-secondary answer-btn">ア</button>
+                <div class="fw-bold">プログラム言語 (<u>氏名</u>、プログラム言語)</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn2" class="btn btn-secondary answer-btn">イ</button>
+                <div class="fw-bold">プログラム言語 (従業員番号、<u>プログラム言語</u>)</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn3" class="btn btn-secondary answer-btn">ウ</button>
+                <div class="fw-bold">プログラム言語 (<u>従業員番号</u>、プログラム言語)</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn4" class="btn btn-secondary answer-btn">エ</button>
+                <div class="fw-bold">プログラム言語 (<u>従業員番号</u>、<u>プログラム言語</u>)</div>
+                <div id="item4-explain" class="d-none">エの解説です。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <button id="next-btn" class="btn btn-link m-2">次の問題</button>
+
+    <script src="dist/problem-manager.js"></script>
 </body>
 </html>

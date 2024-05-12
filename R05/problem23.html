@@ -4,27 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>データベーススペシャリスト試験 午前2 問題</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.css">
 </head>
 <body>
-    <h3>問23</h3>
-    <p>
-        キャパシティプランニングの目的の一つに関する記述のうち、最も適切なものはどれか。
-    </p>
-    <ul>
-        <li>応答時間に最も影響があるボトルネックだけに着目して、適切な変更を行うことによって、
-            そのボトルネックの影響を低減又は排除することである。</li>
-        <li>システムの現在の応答時間を調査して、長期的に監視することによって、将来を含めて応答時間を維持することである。</li>
-        <li>ソフトウェアとハードウェアをチューニングして、現在の処理能力を最大限に引き出して、スループットを向上させることである。</li>
-        <li>パフォーマンスの問題はリソースの過剰使用によって発生するので、特定のリソースの有効利用を向上させることである。</li>
-    </ul>
-
-    <button name="answer" onclick="showAnswer()">正解</button>
-    <button name="next" onclick="toNext(23)">次へ</button>
-
-    <div id="answer">
-        <p>正解: イ</p>
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>問23</h5>
+        <p>キャパシティプランニングの目的の一つに関する記述のうち、最も適切なものはどれか。</p>
     </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn1" class="btn btn-secondary answer-btn">ア</button>
+                <div class="fw-bold">応答時間に最も影響があるボトルネックだけに着目して、適切な変更を行うことによって、
+                    そのボトルネックの影響を低減又は排除することである。</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn2" class="btn btn-secondary answer-btn">イ</button>
+                <div class="fw-bold">システムの現在の応答時間を調査して、長期的に監視することによって、将来を含めて応答時間を維持することである。</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn3" class="btn btn-secondary answer-btn">ウ</button>
+                <div class="fw-bold">ソフトウェアとハードウェアをチューニングして、現在の処理能力を最大限に引き出して、スループットを向上させることである。</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn4" class="btn btn-secondary answer-btn">エ</button>
+                <div class="fw-bold">パフォーマンスの問題はリソースの過剰使用によって発生するので、特定のリソースの有効利用を向上させることである。</div>
+                <div id="item4-explain" class="d-none">エの解説です。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <button id="next-btn" class="btn btn-link m-2">次の問題</button>
+
+    <script src="dist/problem-manager.js"></script>
 </body>
 </html>

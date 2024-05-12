@@ -4,27 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>データベーススペシャリスト試験 午前2 問題</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.css">
 </head>
 <body>
-    <h3>問22</h3>
-    <p>
-        データからパリティを生成し、データとパリティを4台以上のハードディスクに分散して書き込むことによって、
-        2台までのハードディスクが故障してもデータを復旧できるRAIDレベルはどれか。
-    </p>
-    <ul>
-        <li>RAID0</li>
-        <li>RAID1</li>
-        <li>RAID5</li>
-        <li>RAID6</li>
-    </ul>
-
-    <button name="answer" onclick="showAnswer()">正解</button>
-    <button name="next" onclick="toNext(22)">次へ</button>
-
-    <div id="answer">
-        <p>正解: エ</p>
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>問22</h5>
+        <p>データからパリティを生成し、データとパリティを4台以上のハードディスクに分散して書き込むことによって、
+            2台までのハードディスクが故障してもデータを復旧できるRAIDレベルはどれか。</p>
     </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn1" class="btn btn-secondary answer-btn">ア</button>
+                <div class="fw-bold">RAID0</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn2" class="btn btn-secondary answer-btn">イ</button>
+                <div class="fw-bold">RAID1</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn3" class="btn btn-secondary answer-btn">ウ</button>
+                <div class="fw-bold">RAID5</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn4" class="btn btn-secondary answer-btn">エ</button>
+                <div class="fw-bold">RAID6</div>
+                <div id="item4-explain" class="d-none">エの解説です。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <button id="next-btn" class="btn btn-link m-2">次の問題</button>
+
+    <script src="dist/problem-manager.js"></script>
 </body>
 </html>

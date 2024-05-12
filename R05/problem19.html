@@ -4,34 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>データベーススペシャリスト試験 午前2 問題</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.css">
 </head>
 <body>
-    <h3>問19</h3>
-    <p>DRDoS（Distributed Reflection Denial of Service）攻撃に該当するものはどれか。
-    </p>
-    <ul>
-        <li>攻撃対象のWebサーバ1台に対して、多数のPCから一斉にリクエストを送ってサーバのリソースを枯渇させる攻撃と、
-            大量のDNSクエリの送信によってネットワークの帯域を消費する攻撃を同時に行う。
-        </li>
-        <li>攻撃対象のWebサイトのログインパスワードを解読するために、ブルートフォースによるログイン試行を、
-            多数のスマートフォン、IoT機器などから成るボットネットを踏み台にして一斉に行う。
-        </li>
-        <li>攻撃対象のサーバに大量のレスポンスが同時に送り付けられるようにするために、多数のオープンリゾルバに対して、
-            送信元IPアドレスを攻撃対象のサーバのIPアドレスに偽装した名前解決のリクエストを一斉に送信する。
-        </li>
-        <li>
-            攻撃対象の組織内の多数の端末をマルウェアに感染させ、当該マルウェアを遠隔操作することによって
-            データの改ざんやファイルの消去を一斉に行う。
-        </li>
-    </ul>
-
-    <button name="answer" onclick="showAnswer()">正解</button>
-    <button name="next" onclick="toNext(19)">次へ</button>
-
-    <div id="answer">
-        <p>正解: ウ</p>
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>問19</h5>
+        <p>DRDoS（Distributed Reflection Denial of Service）攻撃に該当するものはどれか。</p>
     </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn1" class="btn btn-secondary answer-btn">ア</button>
+                <div class="fw-bold">攻撃対象のWebサーバ1台に対して、多数のPCから一斉にリクエストを送ってサーバのリソースを枯渇させる攻撃と、
+                    大量のDNSクエリの送信によってネットワークの帯域を消費する攻撃を同時に行う。</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn2" class="btn btn-secondary answer-btn">イ</button>
+                <div class="fw-bold">攻撃対象のWebサイトのログインパスワードを解読するために、ブルートフォースによるログイン試行を、
+                    多数のスマートフォン、IoT機器などから成るボットネットを踏み台にして一斉に行う。</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn3" class="btn btn-secondary answer-btn">ウ</button>
+                <div class="fw-bold">攻撃対象のサーバに大量のレスポンスが同時に送り付けられるようにするために、多数のオープンリゾルバに対して、
+                    送信元IPアドレスを攻撃対象のサーバのIPアドレスに偽装した名前解決のリクエストを一斉に送信する。</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
+                <span class="badge bg-primary rounded-pill"></span>
+                <span class="badge bg-success rounded-pill"></span>
+                <div class="ms-2 me-auto">
+                <button id="btn4" class="btn btn-secondary answer-btn">エ</button>
+                <div class="fw-bold">攻撃対象の組織内の多数の端末をマルウェアに感染させ、当該マルウェアを遠隔操作することによって
+                    データの改ざんやファイルの消去を一斉に行う。</div>
+                <div id="item4-explain" class="d-none">エの解説です。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <button id="next-btn" class="btn btn-link m-2">次の問題</button>
+
+    <script src="dist/problem-manager.js"></script>
 </body>
 </html>

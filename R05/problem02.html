@@ -10,70 +10,64 @@
     <script src="script/script.js"></script>
 </head>
 <body>
-    <div id="area"></div>
-
-    <!-- <script id="problem-template" type="text/x-handlebars-template" src="template/prpblem-template.hbs"></script> -->
-
-    <script id="problem-template" type="text/x-handlebars-template">
-        <div class="border rounded m-2 p-2" id="problem-area">
-            <h5>{{ptitle}}</h5>
-            <p>{{pdescription}}</p>
-            <p>[規則]
-                <ol>
-                    <li>データの先頭文字がA～Gの場合はノード1に格納する。</li>
-                    <li>データの先頭文字がH～Nの場合はノード2に格納する。</li>
-                    <li>データの先頭文字がO～Zの場合はノード3に格納する。</li>
-                </ol>
-            </p>
-        </div>
-        <div class="border rounded m-2 p-2 d-none" id="result-area">
-            <span id="result" class="fw-bold"></span>
-        </div>
-        <div class="border rounded m-2 p-2">
-            <ul class="list-group">
-                <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>問2</h5>
+        <p>大文字のアルファベットで始まる膨大な数のデータを、規則に従って複数のノードに割り当てる。
+            このようにあらかじめ定めた規則に従って、複数のノードにデータを分散して割り当てる方法はどれか。</p>
+        <p>[規則]
+            <ol>
+                <li>データの先頭文字がA～Gの場合はノード1に格納する。</li>
+                <li>データの先頭文字がH～Nの場合はノード2に格納する。</li>
+                <li>データの先頭文字がO～Zの場合はノード3に格納する。</li>
+            </ol>
+        </p>
+    </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn1" class="btn btn-secondary answer-btn">ア</button>
+                <div class="fw-bold">2相コミットプロトコル</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn2" class="btn btn-secondary answer-btn">イ</button>
+                <div class="fw-bold">コンシステントハッシング</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
                 <span class="badge bg-primary rounded-pill"></span>
                 <span class="badge bg-success rounded-pill"></span>
                 <div class="ms-2 me-auto">
-                    <button class="btn btn-secondary answer-btn" onclick="answer(1)">ア</button>
-                    <div class="fw-bold">{{item1text}}</div>
-                    <div id="item1-explain" class="d-none">{{item1desc}}</div>
-                </div>
-                </li>
-                <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+                <button id="btn3" class="btn btn-secondary answer-btn">ウ</button>
+                <div class="fw-bold">シャーディング</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
                 <span class="badge bg-primary rounded-pill"></span>
                 <span class="badge bg-success rounded-pill"></span>
                 <div class="ms-2 me-auto">
-                    <button class="btn btn-secondary answer-btn" onclick="answer(2)">イ</button>
-                    <div class="fw-bold">{{item2text}}</div>
-                    <div id="item2-explain" class="d-none">{{item2desc}}</div>
+                <button id="btn4" class="btn btn-secondary answer-btn">エ</button>
+                <div class="fw-bold">レプリケーション</div>
+                <div id="item4-explain" class="d-none">エの解説です。</div>
                 </div>
-                </li>
-                <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
-                    <span class="badge bg-primary rounded-pill"></span>
-                    <span class="badge bg-success rounded-pill"></span>
-                    <div class="ms-2 me-auto">
-                    <button class="btn btn-secondary answer-btn" onclick="answer(3)">ウ</button>
-                    <div class="fw-bold">{{item3text}}</div>
-                    <div id="item3-explain" class="d-none">{{item3desc}}</div>
-                </div>
-                </li>
-                <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
-                    <span class="badge bg-primary rounded-pill"></span>
-                    <span class="badge bg-success rounded-pill"></span>
-                    <div class="ms-2 me-auto">
-                    <button class="btn btn-secondary answer-btn" onclick="answer(4, 4)">エ</button>
-                    <div class="fw-bold">{{item4text}}</div>
-                    <div id="item4-explain" class="d-none">{{item4desc}}</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    
-        <button class="btn btn-link m-2" onclick="toNext()">次の問題</button>
-    </script>
-    <script>
-        init(2);
-    </script>
+            </li>
+        </ul>
+    </div>
+
+    <button id="next-btn" class="btn btn-link m-2">次の問題</button>
+
+    <script src="dist/problem-manager.js"></script>
 </body>
 </html>

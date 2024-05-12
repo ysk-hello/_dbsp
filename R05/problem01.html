@@ -4,88 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>データベーススペシャリスト試験 午前2 問題</title>
-    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/bootstrap.css">
-    <script src="script/handlebars.min-v4.7.8.js"></script>
-    <script src="script/problem-template.js"></script>
 </head>
 <body>
-    <div id="area"></div>
-
-    <!-- <script id="problem-template" type="text/x-handlebars-template" src="template/prpblem-template.hbs"></script> -->
-
-    <!-- <script id="problem-template" type="text/x-handlebars-template">
-        <div class="border rounded m-2 p-2" id="problem-area">
-            <h5>{{ptitle}}</h5>
-            <p>{{pdescription}}</p>
-        </div>
-        <div class="border rounded m-2 p-2 d-none" id="result-area">
-            <span id="result" class="fw-bold"></span>
-        </div>
-        <div class="border rounded m-2 p-2">
-            <ul class="list-group">
-                <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="border rounded m-2 p-2" id="problem-area">
+        <h5>問1</h5>
+        <p>CAP定理に関する記述として、適切なものはどれか。</p>
+    </div>
+    <div class="border rounded m-2 p-2 d-none" id="result-area">
+        <span id="result" class="fw-bold"></span>
+    </div>
+    <div class="border rounded m-2 p-2">
+        <ul class="list-group">
+            <li id="item1" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn1" class="btn btn-secondary answer-btn">ア</button>
+                <div class="fw-bold">システムの可用性は基本的に高く、サービスは利用可能であるが、整合性については厳密ではない。しかし、最終的には整合性が取れた状態になる。</div>
+                <div id="item1-explain" class="d-none">アの解説です。</div>
+            </div>
+            </li>
+            <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+            <span class="badge bg-primary rounded-pill"></span>
+            <span class="badge bg-success rounded-pill"></span>
+            <div class="ms-2 me-auto">
+                <button id="btn2" class="btn btn-secondary answer-btn">イ</button>
+                <div class="fw-bold">トランザクション処理は、データの整合性を保証するので、実行結果が矛盾した状態になることはない。</div>
+                <div id="item2-explain" class="d-none">イの解説です。</div>
+            </div>
+            </li>
+            <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
                 <span class="badge bg-primary rounded-pill"></span>
                 <span class="badge bg-success rounded-pill"></span>
                 <div class="ms-2 me-auto">
-                    <button class="btn btn-secondary answer-btn" onclick="answer(1)">ア</button>
-                    <div class="fw-bold">{{item1text}}</div>
-                    <div id="item1-explain" class="d-none">{{item1desc}}</div>
-                </div>
-                </li>
-                <li id="item2" class="list-group-item d-flex justify-content-between align-items-start">
+                <button id="btn3" class="btn btn-secondary answer-btn">ウ</button>
+                <div class="fw-bold">複数のトランザクションを並列に処理したときの実行結果と、直列で逐次処理したときの実行結果は一致する。</div>
+                <div id="item3-explain" class="d-none">ウの解説です。</div>
+            </div>
+            </li>
+            <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
                 <span class="badge bg-primary rounded-pill"></span>
                 <span class="badge bg-success rounded-pill"></span>
                 <div class="ms-2 me-auto">
-                    <button class="btn btn-secondary answer-btn" onclick="answer(2)">イ</button>
-                    <div class="fw-bold">{{item2text}}</div>
-                    <div id="item2-explain" class="d-none">{{item2desc}}</div>
+                <button id="btn4" class="btn btn-secondary answer-btn">エ</button>
+                <div class="fw-bold">分散システムにおいて、整合性、可用性、分断耐性の三つを同時に満たすことはできない。</div>
+                <div id="item4-explain" class="d-none">エの解説です。</div>
                 </div>
-                </li>
-                <li id="item3" class="list-group-item d-flex justify-content-between align-items-start">
-                    <span class="badge bg-primary rounded-pill"></span>
-                    <span class="badge bg-success rounded-pill"></span>
-                    <div class="ms-2 me-auto">
-                    <button class="btn btn-secondary answer-btn" onclick="answer(3)">ウ</button>
-                    <div class="fw-bold">{{item3text}}</div>
-                    <div id="item3-explain" class="d-none">{{item3desc}}</div>
-                </div>
-                </li>
-                <li id="item4" class="list-group-item d-flex justify-content-between align-items-start">
-                    <span class="badge bg-primary rounded-pill"></span>
-                    <span class="badge bg-success rounded-pill"></span>
-                    <div class="ms-2 me-auto">
-                    <button class="btn btn-secondary answer-btn" onclick="answer(4, 4)">エ</button>
-                    <div class="fw-bold">{{item4text}}</div>
-                    <div id="item4-explain" class="d-none">{{item4desc}}</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    
-        <button class="btn btn-link m-2" onclick="toNext()">次の問題</button>
-    </script> -->
+            </li>
+        </ul>
+    </div>
 
-    <script>
-        let html = Handlebars.templates['prpblem-template.hbs'](
-            {
-                ptitle: `問1`, pdescription: 'CAP定理に関する記述として、適切なものはどれか。', 
-                item1text: 'システムの可用性は基本的に高く、サービスは利用可能であるが、整合性については厳密ではない。しかし、最終的には整合性が取れた状態になる。',
-                item1desc: 'アの解説です。',
-                item2text: 'トランザクション処理は、データの整合性を保証するので、実行結果が矛盾した状態になることはない。',
-                item2desc: 'イの解説です。',
-                item3text: '複数のトランザクションを並列に処理したときの実行結果と、直列で逐次処理したときの実行結果は一致する。',
-                item3desc: 'ウの解説です。',
-                item4text: '分散システムにおいて、整合性、可用性、分断耐性の三つを同時に満たすことはできない。',
-                item4desc: 'エの解説です。',
-                ansNum: 4
-            }
-        );
-        console.log(html);
-        document.getElementById('area').innerHTML = html;
-    </script>
-    <script>
-        // init(1);
-    </script>
+    <button id="next-btn" class="btn btn-link m-2">次の問題</button>
+
+    <script src="dist/problem-manager.js"></script>
 </body>
 </html>

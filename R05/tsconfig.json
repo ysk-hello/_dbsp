@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "esnext", // コンパイルされたJavaScriptのバージョン
+        "module": "esnext", // 使用するモジュールシステム
+        "rootDir": "./src",
+        "outDir": "./dist", 
+        "strict": true, // 厳格な型チェックを有効にする
+        "esModuleInterop": true, // ESモジュールとの互換性を向上させる
+        "sourceMap": true, 
+        // "lib": ["dom"],
+        // "allowJs": true,
+    }
+}
